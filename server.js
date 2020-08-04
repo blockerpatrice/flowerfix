@@ -5,15 +5,18 @@ const client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWI
 const path = require("path");
 
 const app = express();
+const port = process.env.PORT || 9000;
+
 app.use(cors());
 //cors is a middleware that allows communication between the react client and server without restriction
 
 var number;
 //using this as a global variable so both functions have access to the phone number
 
+
+
+
 app.use(express.static(path.join(__dirname, "client", "build")));
-
-
 
 app.get("/", (req,res) =>{
   const {phoneNumber} = req.query;
@@ -38,6 +41,6 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-app.listen(9000, () => {
+app.listen(port, () => {
   console.log("Running on port 9000");
 })
