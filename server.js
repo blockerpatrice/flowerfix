@@ -13,9 +13,6 @@ app.use(cors());
 var number;
 //using this as a global variable so both functions have access to the phone number
 
-
-
-
 app.use(express.static(path.join(__dirname, "client", "build")));
 
 app.get("/", (req,res) =>{
