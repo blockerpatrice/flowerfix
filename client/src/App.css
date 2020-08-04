@@ -1,0 +1,352 @@
+.form-styles{
+  display:flex;
+  grid-template-columns:auto;
+  background-color: white;
+  width:20vw;
+  height:63vh;
+  margin:0 auto;
+  margin-top:18vh;
+  border-radius:10px;
+  text-align:center;
+}
+
+.confirm{
+  display:flex;
+  flex-direction:column;
+  margin:0 auto;
+  background-color: white;
+  height:40vh;
+  width:30vw;
+  margin-top:30vh;
+  border-radius:20px;
+  text-align: center;
+}
+
+.confirm-one{
+  display:flex;
+  font-size:1vw;
+  padding:60px;
+}
+
+.confirm-two{
+  display:flex;
+  height:10vh;
+}
+
+.confirm-code{
+  width:100%;
+  height:10vh;
+  border-radius:4px;
+  font-size:50px;
+  text-align:center;
+  color:#3c4048;
+}
+
+.confirm-code:focus{
+  outline:none;
+}
+
+.confirm-button{
+  width:15vw;
+  border-top-right-radius:25px;
+  border-bottom-right-radius:25px;
+  border-top-left-radius:25px;
+  border-bottom-left-radius:25px;
+  background-color:#c33916;
+  font-size:1em;
+  font-weight:500;
+  color:white;
+  padding-left:2vw;
+  padding-right:2vw;
+  padding-top:2vh;
+  padding-bottom:2vh;
+  margin:auto;
+}
+
+.confirm-button:focus{
+  outline:none;
+}
+
+.confirm-button:hover{
+  background-color: #49626e;
+}
+
+.one{
+  display:block;
+  grid-row:1;
+  background:url('./assets/flowerfix-logo.svg') center;
+  background-repeat:no-repeat;
+  background-size:20vh;
+  height:12vh;
+}
+
+.two{
+  grid-row:2;
+  font-family:'Playfair Display', serif;
+  color:#c33916;
+  font-size:3vh;
+}
+.three{
+  grid-row:3;
+  font-family:'Lato', sans-serif;
+  font-size:1.5vh;
+  font-weight:300;
+  width:100%;
+  padding-top:0px;
+}
+
+.four{
+  padding-bottom:2.5vh;
+  padding-top:2.5vh;
+  display:inline-block;
+  grid-row:4;
+  font-family:'Lato', sans-serif;
+  text-align:left;
+  font-size:1.2vh;
+}
+
+.four>p{
+  margin:0.6em;
+}
+
+.five{
+  grid-row:5;
+  text-align:left;
+  padding-top:1vw;
+  margin:auto;
+  padding-left:20%;
+  font-size:1vh;
+}
+
+.six{
+  display:flex;
+  text-align:left;
+  text-align:justify;
+  grid-row:6;
+  font-family:'Lato', sans-serif;
+  font-size:0.8vh;
+  font-weight:300;
+  padding-top:1vh;
+  margin-right:20%;
+  margin-left:20%;
+}
+
+.seven{
+  grid-row:7;
+  padding-top:2.5vh;
+  padding-bottom:6vh;
+}
+
+.eight{
+  grid-row:8;
+  background:url('./assets/textualPoweredByLogo.svg') center;
+  background-repeat:no-repeat;
+  background-size:10vh;
+  height:4vh;
+}
+
+.button{
+  border-top-right-radius:25px;
+  border-bottom-right-radius:25px;
+  border-top-left-radius:25px;
+  border-bottom-left-radius:25px;
+  background-color:#c33916;
+  font-size:0.8em;
+  font-weight:500;
+  color:white;
+  padding-left:1vw;
+  padding-right:1vw;
+  padding-top:1.2vh;
+  padding-bottom:1.2vh;
+  font-size:1vh;
+}
+
+.button:hover{
+  background-color:#49626e;
+}
+
+.button:focus{
+  outline:none;
+}
+
+.PhoneInputCountrySelect{
+  display:none;
+}
+
+.PhoneInputInput{
+  border:0;
+  border-radius:5px;
+  outline:none;
+  font-size:1.5vh;
+  background-color: #e8e8e8;
+  width:11vw;
+  height:1vh;
+  padding:1vh;
+}
+
+.PhoneInputCountryIconImg{
+  display:none;
+}
+
+.success{
+  display:flex;
+  width:50vw;
+  height:50vh;
+  background-color: white;
+  margin:0 auto;
+  padding:20px;
+  margin-top:30vh;
+  border-radius:20px;
+  flex-direction: column;
+}
+
+.success-text{
+  display:flex;
+  width:50vw;
+  margin:0 auto;
+  margin-top:10px;
+  font-family:'Lato', sans-serif;
+  text-align:center;
+  font-size:5vw;
+}
+
+
+.alert-text{
+  color:black;
+  font-size:6vw;
+}
+
+
+@media screen and (max-width:1920px) and (max-height:760px){
+  .form-styles{
+    width:40vh;
+  }
+  .PhoneInputInput{
+    width:22vh;
+    height:0.5vh;
+    padding:1.5vh;
+  }
+  .confirm{
+    height:40vh;
+  }
+}
+
+@media screen and (max-height:1920px) and (max-width:1330px){
+  .form-styles{
+    height:70vh;
+    width:40vh;
+  }
+  
+  .PhoneInputInput{
+    width:21vh;
+  }
+}
+
+@media screen and (max-height:1920px) and (max-width:1230px){
+  .form-styles{
+    width:35vh;
+  }
+  .PhoneInputInput{
+    width:19vh;
+  }
+}
+
+@media screen and (max-height:1920px) and (max-width:1000px){
+  .form-styles{
+    width:30vh;
+    height:55vh;
+  }
+  .PhoneInputInput{
+    width:16vh;
+    padding:1vh;
+  }
+  .one{
+    background-size:13vh;
+    height:6vh;
+  }
+  .two{
+    font-size:2vh;
+  }
+  .three{
+    font-size:1vh;
+  }
+  .four{
+    font-size:1vh;
+  }
+}
+
+@media screen and (max-height:311px) {
+  .form-styles{
+    width:35vh;
+    height:70vh;
+  }
+}
+
+@media screen and (max-height:390px) and (max-width:1230px){
+  .form-styles{
+    width:35vh;
+    height:60vh;
+  }
+  .PhoneInputInput{
+    width:20vh;
+  }
+}
+
+@media screen and (max-height:750px){
+  .confirm{
+    height:45vh;
+  }
+  .success-text{
+    margin:0 auto;
+    margin-top:10px;
+    font-size:5vw;
+  }
+  .success{
+    width:150vh;
+  }
+}
+
+@media screen and (max-height:570px){
+  .confirm-button{
+    width:20vh;
+    font-size:0.5em;
+    padding-left:1vh;
+    padding-right:1vh;
+    padding-top:2vh;
+    padding-bottom:2vh;
+    margin:auto;
+  }
+
+  .confirm-code{
+    height:8vh;
+  }
+
+  .success-text{
+    font-size:4vw;
+  }
+}
+
+@media screen and (max-height:500px){
+  .confirm{
+    height:50vh;
+  }
+  .success-text{
+    font-size:12vh;
+  }
+}
+
+@media screen and (max-height:430px){
+  .confirm-button{
+    width:50vh;
+  }
+  .confirm{
+    height:55vh;
+    margin-top:20vh;
+  }
+}
+
+@media screen and (max-height:350px){
+  .confirm{
+    height:65vh;
+  }
+}
