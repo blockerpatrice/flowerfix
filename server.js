@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+const path = require("path");
 
 const app = express();
 app.use(cors());
@@ -9,6 +10,10 @@ app.use(cors());
 
 var number;
 //using this as a global variable so both functions have access to the phone number
+
+app.use(express.static(path.join(__dirname, "client", "build")));
+
+
 
 app.get("/", (req,res) =>{
   const {phoneNumber} = req.query;
@@ -28,6 +33,10 @@ app.get('/confirm', (req,res) => {
       .then(verification_check => res.send(verification_check.status));
 
 })
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 app.listen(9000, () => {
   console.log("Running on port 9000");
